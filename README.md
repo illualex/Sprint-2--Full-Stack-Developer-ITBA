@@ -8,5 +8,5 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 Para Iniciar Proyecto utilizar la terminal:
--"npm install" dentro del proyecto
--"npm run dev" para iniciar/levantar pagina web
+//"npm install" dentro del proyecto
+//"npm run dev" para iniciar/levantar pagina web
