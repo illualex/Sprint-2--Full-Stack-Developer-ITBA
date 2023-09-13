@@ -15,7 +15,6 @@ export const Input = ({ label, type, id, placeholder }) => {
             }, {})
         return filtered
     }
-
     function isFormInvalid(error) {
         if (Object.keys(error).length > 0) {
             return true
@@ -44,7 +43,7 @@ export const Input = ({ label, type, id, placeholder }) => {
             <input
                 id={id}
                 type={type}
-                className="w-full p-5 font-medium border rounded-md border-slate-300 placeholder:opacity-60"
+                className="w-full p-2.5 font-medium border rounded-md border-slate-300 placeholder:opacity-60"
                 placeholder={placeholder}
                 {...register(label, {
                     required: {

@@ -40,10 +40,6 @@ h1{
     margin: auto;
 }
 
-#Actividad {
-    color: var(--blanco);
-}
-
 .container {
     background-color: var(--gris);
     border-radius: 2em;

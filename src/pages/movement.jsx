@@ -1,56 +1,53 @@
+import React, { useEffect, useState } from 'react';
 import '../App.css';
 import '../components/css/movement.css';
 
 export default function Movement() {
-
-    // Simulación de Movimentos//
-
-    const movimientos = [
+    const [movimientos, setMovimientos] = useState([
         { fecha: '2023-08-25', descripcion: 'Compra en tienda', monto: -600.00 },
         { fecha: '2023-08-24', descripcion: 'Transferencia', monto: 780.00 },
         { fecha: '2023-08-23', descripcion: 'Retiro en cajero', monto: -3000.00 }
+    ]);
+    const [mostrarDetalleIndex, setMostrarDetalleIndex] = useState(null);
 
-    ]
+    useEffect(() => {
+        cargarMovimientos();
+    }, []);
 
-    // Función para cargar los movimientos en la página //
-    function cargarMovimientos() {
-        const movimientosList = document.getElementById('movimientos-list');
-
-        movimientos.forEach((movimiento, index) => {
-            const li = document.createElement('li');
-            li.innerHTML = `
-        <span>${movimiento.fecha}</span>
-        <span>${movimiento.descripcion}</span>
-        <span>${movimiento.monto > 0 ? '+' : '-'}$${Math.abs(movimiento.monto).toFixed(2)}</span>
-      `;
-
-            const detallesButton = document.createElement('button');
-            detallesButton.innerHTML = '<p class="md">Más </br> Detalles</p>';
-            detallesButton.addEventListener('onClick', () => mostrarDetalles(index));
-
-            li.appendChild(detallesButton);
-            movimientosList.appendChild(li);
-        });
-    }
-
-
-    window.onload = cargarMovimientos;
-
+    const cargarMovimientos = () => {
+        //para cargar movimientos
+    };
+    const toggleDetalle = (index) => {
+        setMostrarDetalleIndex(mostrarDetalleIndex === index ? null : index);
+    };
 
     return (
         <>
-            <h1 className='text-center text-3xl'>Ultimos movimientos</h1>
-
+            <h1 className="mt-5 text-3xl text-center">Ultimos movimientos</h1>
             <section id="movement">
                 <div className="container" >
-                    <h1 id="Actividad" >Actividad</h1>
+                    <h1 className='text-white text-2xl'>Actividad</h1>
                     <ul id="movimientos-list">
-
+                        {movimientos.map((movimiento, index) => (
+                            <li key={index}>
+                                <span>{movimiento.fecha}</span>
+                                <span>{movimiento.descripcion}</span>
+                                <span>{movimiento.monto > 0 ? '+' : '-'}$ {Math.abs(movimiento.monto).toFixed(2)}</span>
+                                <button onClick={() => toggleDetalle(index)}>Ver Detalle</button>
+                                {mostrarDetalleIndex === index && (
+                                    <div className="dropdown">
+                                        <ul className="detalle-list">
+                                            <li>Sucursal: 000 - Casa Central</li>
+                                            <li>Referencia: 165215</li>
+                                            <li>Fecha: {movimiento.fecha} | 15:25 hs</li>
+                                            <li>Descripción: {movimiento.descripcion}</li>
+                                            <li>Monto: {movimiento.monto > 0 ? '+' : '-'}$ {Math.abs(movimiento.monto).toFixed(2)}</li>
+                                        </ul>
+                                    </div>
+                                )}
+                            </li>
+                        ))}
                     </ul>
-                </div>
-
-                <div>
-                    <a><button type="button" id="bttnvermas" >Ver más</button></a>
                 </div>
             </section>
         </>

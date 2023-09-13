@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-
 import './App.css'
 import Header from './assets/header/header';
 import Home from './pages/home';
@@ -14,41 +13,20 @@ import Lending from './pages/lending';
 import Signup from './pages/signup';
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  let acc = document.getElementsByClassName("accordion");
-  let i;
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
-      this.classList.toggle("active");
-      let panel = this.nextElementSibling;
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
-      }
-    });
-  }
-
   return (
     <>
-      
       <BrowserRouter>
       <Header></Header>
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
-          
             <Route exact path="profile" element={<Profile />} />
             <Route exact path="movement" element={<Movement />} />
             <Route exact path="price" element={<Price />} />
             <Route exact path="lending" element={<Lending />} />
             <Route exact path="about" element={<About />} />
             <Route exact path="signup" element={<Signup />} />
-                 
         </Routes>
-        
       </BrowserRouter>
-      
       <Footer></Footer>
     </>
   )

@@ -17,25 +17,20 @@ const imageData = [
     {
         alt: "image1",
         url: carousel1
-
     },
     {
-        label: "Image 2",
         alt: "image2",
         url: carousel2
     },
     {
-        label: "Image 3",
         alt: "image3",
         url: carousel3
     },
     {
-        label: "Image 4",
         alt: "image4",
         url: carousel4
     },
     {
-        label: "Image 5",
         alt: "image5",
         url: carousel5
     }
@@ -62,17 +57,17 @@ export default function Home() {
                 infiniteLoop={true}
                 selectedItem={imageData[currentIndex]}
                 onChange={handleChange}
+                showThumbs={false}
                 className="carousel-container"
             >
                 {renderSlides}
             </Carousel>
-
             <div className="container-card">
                 <div className="card">
                     <img src={card1} className="img-card" alt="Persona dando la mano a un mecanico"/>
                 </div>
                 <div className="card">
-                    <img src={card2} classn="img-card" alt="Persona trabajando en una cafeteria"/>
+                    <img src={card2} className="img-card" alt="Persona trabajando en una cafeteria"/>
                 </div>
                 <div className="card">
                     <img src={card3} className="img-card" alt="Telefono con graficos de inversiones"/>
