@@ -7,11 +7,11 @@ import google from '../../assets/images/redes-app/google-play.png'
 import apple from '../../assets/images/redes-app/apple-store.png'
 
 export default function Footer() {
-
     return (
         <>
-        <div className="grid grid-cols-3">
-                <div className="text-center p-0 m-15px">
+        <hr className='bg-black h-0.5'/>
+        <div className="grid grid-cols-3 p-5 max-[426px]:inline-block max-[426px]:items-center">
+                <div className="text-left p-0 m-15px">
                     <a href="#">
                         <p>Politica y Privacidad</p>
                     </a>
@@ -23,8 +23,8 @@ export default function Footer() {
                     </a>
                     <p>Contacto: <br/> <a href="#">bancocapitalitba2023@hotmail.com</a></p>
                 </div>
-                <div className="footer-logo">
-                    <img className="pt-10px w-28" src={logo} alt="Logo Banco Nacional ITBA"/>
+                <div className="footer-logo justify-center">
+                    <img className="pb-1 w-28" src={logo} alt="Logo Banco Nacional ITBA"/>
                         <p className="text-center">© 2023 Banco Capital ITBA <br/> Todos los derechos Reservados.</p>
                 </div>
                 <div className="p-10px text-center">

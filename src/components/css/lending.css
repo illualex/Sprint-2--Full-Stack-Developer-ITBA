@@ -19,23 +19,6 @@
     float: right;
 }
 
-.input-item label{
-    font-size: 22px;
-    font-weight: 600;
-    display: block;
-}
-
-.amount{
-    margin-bottom: 25px;
-}
-
-.input-item div input{
-    background-color: transparent;
-    border: none;
-    outline: transparent;
-    border-bottom: 3px solid var(--rojo);
-    font-size: 1.5rem;
-}
 
 .wraper{
     display: flex;
@@ -54,12 +37,12 @@
     margin-top: 20px;
     text-transform: uppercase;
     color: #fff;
-    width: max-content;
-    font-weight:650;
+    font-size: 16px;
+    font-weight: 650;
 }
 
 .calcular:hover{
-    background-color: #B32011 ;
+    background-color: #C42021 ;
     cursor: pointer;
 }
 
@@ -89,12 +72,6 @@
     flex-direction: column;
 }
 
-.result--container{
-    
-    flex-direction: column;
-    display: flex;
-    justify-content: flex-start;
-}
 
 .results p{
     color: var(--negro);
@@ -114,7 +91,7 @@
 .taxTable{
     width: 50%;
     border-radius: 10px;
-    background-color: var(--rojo);
+    background-color: var(--blanco);
     padding: 25px;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -123,7 +100,7 @@
 .taxTable td{
     width: 50%;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 600;
     font-family: var(--text);
     padding-top: 10px;
