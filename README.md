@@ -1,3 +1,8 @@
+# Full Stack Developer ITBA (Instituto Tecnológico de Buenos Aires)
+- Sprint: 2
+- Proyecto: BCIB (Banco Capital ITBA)
+- Lenguajes: ReactJS / HTML / JS / CSS
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -10,5 +15,3 @@ Currently, two official plugins are available:
 Para Iniciar Proyecto utilizar la terminal:
 //"npm install" dentro del proyecto
 //"npm run dev" para iniciar/levantar pagina web
-
-adsasd
